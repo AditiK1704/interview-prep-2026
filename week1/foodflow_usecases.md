@@ -26,6 +26,8 @@ graph LR
         UC10[Manage Users]
         UC11[View Reports]
         UC12[Review]
+        UC13[Cancel Order]
+        UC14[Refund/Support]
     end
 
     Customer --> UC1
@@ -33,14 +35,17 @@ graph LR
     Customer --> UC3
     Customer --> UC4
     Customer --> UC12
+    Customer -.->|extend| UC13
     UC3 --> UC5  
     UC3 -.->|extend| UC6
 
     RestOwner --> UC7
     RestOwner --> UC8
+    UC13 --> RestOwner
 
     Agent --> UC9
 
     Admin --> UC10
     Admin --> UC11
+    Admin --> UC14 --> Customer
 ```
