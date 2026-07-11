@@ -24,10 +24,10 @@ graph LR
 
     Student --> UC1
     Student --> UC2
-    Student --> UC11
+    Student --> |<<extend>>|UC11
     Student --> UC12
 
-    Librarian --> UC3
+    Librarian --> |include|UC3
     Librarian --> UC4
     Librarian --> UC6
     Librarian --> UC5
@@ -39,8 +39,7 @@ graph LR
     UC8 --> UC12 
     UC1 --> |include|UC7
     UC2 -.-> |include|UC7
-    UC8 -.->|<<extend>>| UC2
-    UC6 -.-> |<<extend>>| UC1
+    
 
 
 
