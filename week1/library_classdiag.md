@@ -69,13 +69,13 @@ classDiagram
         +reverve_book()
     }
      
-     Librarian "1" --> "0..*" Student : verifies
-     Librarian "1" --> "0..*" Book : issues
-     Librarian "1" --> "0..*" Fine : calculates
+     Librarian "1" --> "many" Student : verifies
+     Librarian "1" --> "many" Book : issues
+     Librarian "1" --> "many" Fine : calculates
 
-     Student "1" --> "0..*" Book : borrows
-     Student "1" --> "0..*" Reserve : reserves
-     Student "1" --> "0..*" Fine : pays
+     Student "1" --> "many" Book : borrows
+     Student "1" --> "many" Reserve : reserves
+     Student "1" --> "many" Fine : pays
      Library "1" o-- "many" Librarian : employs
      Library "1" *-- "many" Book : contains
      Student "1" *-- "1"Membership : owns
