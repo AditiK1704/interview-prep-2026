@@ -58,8 +58,8 @@ classDiagram
     }
     class History{
         +int student_id
-        +check_history(
-            
+        +check_history()
+        +check_previous_fine()
     }
     class Reserve{
         +int student_id
@@ -68,3 +68,16 @@ classDiagram
         +check_availability()
         +reverve_book()
     }
+     
+     Librarian "1" --> "0..*" Student : verifies
+     Librarian "1" --> "0..*" Book : issues
+     Librarian "1" --> "0..*" Fine : calculates
+
+     Student "1" --> "0..*" Book : borrows
+     Student "1" --> "0..*" Reserve : reserves
+     Student "1" --> "0..*" Fine : pays
+     Library "1" o-- "many" Librarian : employs
+     Library "1" *-- "many" Book : contains
+     Student "1" *-- "1"Membership : owns
+     History <|--  Reserve  
+```
