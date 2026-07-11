@@ -24,7 +24,6 @@ graph LR
 
     Student --> UC1
     Student --> UC2
-    Student --> UC3
     Student --> UC11
     Student --> UC12
 
