@@ -36,7 +36,7 @@ graph LR
     Librarian --> UC9
     Librarian --> UC10
 
-    UC8 --> UC12 
+    UC8 --> |include|UC12 
     UC1 --> |include|UC7
     UC2 -.-> |include|UC7
     
