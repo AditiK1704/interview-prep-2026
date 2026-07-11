@@ -66,9 +66,32 @@ classDiagram
         +complete_delivery() void
     }
 
+    class Admin{
+        +int admin_id
+        +String name
+        -manage_users()
+        -view reports
+        +update_Menuitems() 
+        +ban_restraunts(restaurant_id)
+        +update_users() List
+    }
+
+    class Review{
+        +int customer_id
+        +int order_id
+        +String review
+        +int rating
+        +delete_review()
+        +update_review()
+
+    }
+
     Customer "1" --> "many" Order : places
     Restaurant "1" --> "many" MenuItem : offers
     Order "many" o-- "many" MenuItem : contains
     Order "1" *-- "1" Payment : settled via
     DeliveryAgent "1" --> "0..1" Order : delivers
+    Admin "1" --> "0..1" Restaurant : 
+    Customer "1" --> "0..1" Review : rating
+    
 ```
