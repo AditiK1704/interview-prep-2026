@@ -47,3 +47,4 @@ sequenceDiagram
     Interest->>Account: Get Balance
     Account-->>Interest: Balance
     Interest-->>Customer: Interest Amount
+
